@@ -12,27 +12,34 @@ class GenderPreProcess:
 		self.en_file = en_file
 		self.l2_file = lang2_file
 
-		self.male_search_words = ['he ','him ','his ', 'boy ', 'father ', \
-		'husband ', 'male ','man ','mr. ','sir ','son ','uncle ', 'men\'s ']
+		self.male_search_words = ['he ']
 
-		self.female_search_words = ['she ','her ', 'girl ','mother ','wife ',\
-		 'female ','woman ', 'ms. ','madam ','daughter ','aunt ', 'women\'s ']
+		self.female_search_words = ['she ']
 
-		#Still need to add swaps for 2nd language for words like uncle/aunt etc.
 		self.gender_pairs = \
-		{'he':'she', 'she':'he',\
-		'him':'her','her':'him',\
-		'his':'her','her':'his',\
-		'boy':'girl','girl':'boy',\
-		'father':'mother','mother':'father',\
-		'husband':'wife','wife':'husband',\
-		'male':'female','female':'male',\
-		'man':'woman','woman':'man',\
-		'mr.':'ms.','ms.':'mr.',\
-		'sir':'madam','madam':'sir',\
-		'son':'daughter','daughter':'son',\
-		'uncle':'aunt','aunt':'uncle',\
-		'men\'s':'women\'s','women\'s':'men\'s '}
+		{'he':'she', 'she':'he'}
+
+		# self.male_search_words = ['he ','him ','his ', 'boy ', 'father ', \
+		# 'husband ', 'male ','man ','mr. ','sir ','son ','uncle ', 'men\'s ']
+
+		# self.female_search_words = ['she ','her ', 'girl ','mother ','wife ',\
+		#  'female ','woman ', 'ms. ','madam ','daughter ','aunt ', 'women\'s ']
+
+		#Still need to add swaps for 2nd language.
+		# self.gender_pairs = \
+		# {'he':'she', 'she':'he',\
+		# 'him':'her','her':'him',\
+		# 'his':'her','her':'his',\
+		# 'boy':'girl','girl':'boy',\
+		# 'father':'mother','mother':'father',\
+		# 'husband':'wife','wife':'husband',\
+		# 'male':'female','female':'male',\
+		# 'man':'woman','woman':'man',\
+		# 'mr.':'ms.','ms.':'mr.',\
+		# 'sir':'madam','madam':'sir',\
+		# 'son':'daughter','daughter':'son',\
+		# 'uncle':'aunt','aunt':'uncle',\
+		# 'men\'s':'women\'s','women\'s':'men\'s '}
 
 	#Determines if a given sentence has any indication of the male gender
 	def maleIndicated(self,line):
